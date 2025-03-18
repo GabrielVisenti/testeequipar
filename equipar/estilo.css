@@ -1,0 +1,388 @@
+/* Reseta margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+html, body {
+    height: 100%; /* Garante que o body ocupe toda a altura da viewport */
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Torna o body um contêiner flex */
+    background: url('fundoazul.png') no-repeat center center fixed;
+} 
+
+body {
+    font-family: 'Roboto', sans-serif; /* Usando a nova fonte */
+    line-height: 1.8;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #000000;
+}
+
+/* Header e conteúdo principal */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #0060a0;
+    color: #fff;
+    padding: 10px 20px;
+    height: 80px;
+}
+
+.typing {
+    background-color: white; /* Cor de fundo branco */
+    padding: 20px; /* Espaçamento interno para afastar o texto das bordas */
+    border-radius: 10px; /* Bordas arredondadas (opcional) */
+    max-width: 900px; /* Largura máxima para o quadrado não ocupar toda a página */
+    margin: auto; /* Centraliza o quadrado na página */
+    
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Faz o conteúdo crescer e ocupar o espaço disponível */
+section {
+    padding: 20px;
+    text-align: justify;
+    flex-grow: 1; /* Garante que o conteúdo ocupe o espaço entre o header e o footer */
+}
+
+#logo {
+    width: 140px;
+    height: auto;
+}
+
+/* Botão do WhatsApp */
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* Estilos para footer */
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #0060a0;
+    color: rgb(255, 255, 255);
+    margin-top: auto; /* Empurra o footer para o final da página */
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+footer ul li a:hover {
+    color: #0077b5; /* Cor azul do LinkedIn ao passar o mouse */
+}
+
+/* Botão de assistente */
+#assistant-btn {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #f1c40f;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#assistant-box {
+    position: fixed;
+    bottom: 130px;
+    right: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #logo {
+        max-width: 100px;
+    }
+
+    section {
+        padding: 10px;
+    }
+
+    footer ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #whatsapp {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    section {
+        font-size: 14px;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    #whatsapp {
+        font-size: 18px;
+    }
+}
+
+.container {
+    display: flex;
+    align-items: flex-start; /* Alinha os itens ao topo */
+}
+
+.left-image {
+    width: 200px; /* Ajuste o tamanho da imagem conforme necessário */
+    margin-right: 20px; /* Espaçamento entre a imagem e o quadrado */
+}
+
+.ne {
+    padding: 5rem 10rem;
+    height: 300px; /* Ajuste a altura conforme necessário */
+}
+.typing h2 {
+    margin-top: 0; /* Remove o espaçamento superior do título */
+}
+
+.typing p {
+    margin: 1rem 0 0 0; /* Espaçamento entre o título e o parágrafo */
+}
+
+/* PARTE DE MISSÕES */
+.features-section {
+    text-align: center;
+    margin: 95px 0;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+
+.features-content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.features-content {
+    display: flex; /* Usamos flexbox para posicionar as caixas lado a lado */
+    justify-content: space-between; /* Distribui as caixas com espaçamento entre elas */
+    flex-wrap: wrap; /* Permite que as caixas se movam para a próxima linha se não houver espaço suficiente */
+    gap: 20px; /* Adiciona um espaçamento entre as caixas */
+    margin: 20px; /* Adiciona margem ao redor do contêiner */
+}
+
+.features-content {
+    display: flex; /* Usamos flexbox para posicionar as caixas lado a lado */
+    justify-content: space-between; /* Distribui as caixas com espaçamento entre elas */
+    flex-wrap: wrap; /* Permite que as caixas se movam para a próxima linha se não houver espaço suficiente */
+    gap: 20px; /* Adiciona um espaçamento entre as caixas */
+}
+
+.features-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.features-content {
+    display: flex; /* Habilita o Flexbox */
+    flex-wrap: wrap; /* Permite que as caixas quebrem de linha se necessário */
+    justify-content: space-between; /* Espaça as caixas uniformemente */
+    gap: 20px; /* Espaçamento entre as caixas */
+}
+
+.features-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.features-content {
+    display: flex; /* Habilita o Flexbox */
+    flex-wrap: wrap; /* Permite que as caixas quebrem de linha se necessário */
+    justify-content: space-between; /* Espaça as caixas uniformemente */
+    gap: 20px; /* Espaçamento entre as caixas */
+}
+
+.features-section {
+    text-align: center;
+    padding: 40px;
+}
+
+.features-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.feature-box {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+.styled-hr {
+    border: none; /* Remove a borda padrão */
+    height: 30px; /* Define a altura da linha */
+    background: linear-gradient(to right, #0060a0, #bfbfbf); /* Gradiente de cor */
+    margin:  0; /* Espaço em cima e embaixo da linha */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra */
+    
+}
+
+.feature-box svg {
+    margin-bottom: 15px;
+}
+
+.feature-box h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.welcome-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Garante que ocupe toda a altura da tela */
+    position: relative;
+    background-color: transparent; /* Fundo transparente para mostrar a imagem */
+}
+
+.message-box {
+    background-color: rgba(0, 96, 160, 0.8); /* Cor de fundo com transparência */
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 15px; /* Bordas arredondadas */
+    width: 60%; /* Largura do quadrado */
+    max-width: 700px; /* Limita a largura máxima */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para dar destaque */
+}
+
+.message-box h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4); /* Sombras no título */
+}
+
+.message-box p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    font-weight: 300;
+    max-width: 80%;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .feature-box {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .feature-box {
+        width: 100%;
+    } 
+
+}
+
+
+

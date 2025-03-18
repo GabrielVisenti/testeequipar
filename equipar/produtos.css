@@ -1,0 +1,152 @@
+/* Reseta margens e preenchimentos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo geral */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.9;
+    color: #000000;
+    position: relative;
+} 
+
+/* Definindo a imagem de fundo e garantindo sua visibilidade */
+body {
+    background: url('novofundo.png') no-repeat center center fixed;  /* A imagem de fundo sendo aplicada diretamente */
+    background-size: cover;
+    color: #ffffff;
+}
+
+/* Remover qualquer cor de fundo branca da seção */
+section {
+    padding: 40px 20px;
+    text-align: left;
+    background: transparent;  /* Assegura que a imagem de fundo do body seja visível */
+}
+
+/* Outras alterações mantêm o mesmo para os outros elementos da página */
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinha o conteúdo à esquerda */
+    background: rgba(0, 96, 160, 0.8); /* Cor de fundo com transparência */
+    color: #fff;
+    padding: 20px;
+    height: 80px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#logo {
+    width: 140px;
+    height: auto;
+}
+
+/* Navegação */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    margin-left: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav ul li a:hover {
+    color: #0077b5;
+}
+
+/* Efeito de hover no item */
+.catalog-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+/* Botão do WhatsApp */
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Mudado para a direita */
+    background-color: #25D366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+#whatsapp:hover {
+    background-color: #128C7E;
+}
+
+/* Estilos para footer */
+footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: #0060a0;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: auto; /* Empurra o footer para o final da página */
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+footer ul li a:hover {
+    color: #0077b5; /* Cor azul do LinkedIn ao passar o mouse */
+}
+
+/* Texto ao lado do ícone do WhatsApp */
+#whatsapp-text {
+    position: fixed;
+    bottom: 90px;
+    right: 100px;
+    font-size: 14px;
+    color: #000;  /* Cor do texto para destacar */
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.5;
+    background-color: rgba(255, 255, 255, 0.8);  /* Fundo branco com leve transparência */
+    padding: 10px 15px;
+    border-radius: 5px;
+    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  /* Adicionando uma leve sombra para destacar */
+}
